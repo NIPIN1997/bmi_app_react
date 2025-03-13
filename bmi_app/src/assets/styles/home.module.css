@@ -1,0 +1,29 @@
+body {
+  background-image: url("../images/background_image.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bolder;
+  color: black;
+}
+.container {
+  height: 80vh;
+  width: 75vw;
+  background-color: white;
+  opacity: 0.93;
+  padding: 20px;
+}
+.subContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
