@@ -2,8 +2,6 @@ body {
   background-image: url("../images/background_image.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,15 +13,113 @@ body {
   color: black;
 }
 .container {
-  height: 80vh;
-  width: 75vw;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
   background-color: white;
   opacity: 0.93;
   padding: 20px;
+  margin-bottom: 50px;
+  border-radius: 25px;
 }
 .subContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
+}
+.borderHorizontal {
+  display: none;
+}
+.borderVertical {
+  display: block;
+}
+
+@media screen and (min-width: 850px) and (max-width: 1250px) {
+  .container {
+    width: 800px;
+  }
+  .heading {
+    margin-bottom: 50px;
+  }
+  .subContainer {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .subContainer > .content {
+    display: flex;
+    justify-content: center;
+  }
+  .borderVertical {
+    display: none;
+  }
+  .borderHorizontal {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 850px) {
+  .container {
+    width: 600px;
+  }
+  .heading {
+    margin-bottom: 50px;
+  }
+  .subContainer {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .borderVertical {
+    display: none;
+  }
+  .borderHorizontal {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 650px) {
+  .container {
+    width: 400px;
+  }
+  .heading {
+    margin-bottom: 50px;
+  }
+  .subContainer {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .borderVertical {
+    display: none;
+  }
+  .borderHorizontal {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 340px;
+  }
+  .heading {
+    margin-bottom: 5px;
+  }
+  .subContainer {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .borderVertical {
+    display: none;
+  }
+  .borderHorizontal {
+    display: block;
+  }
 }

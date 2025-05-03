@@ -51,10 +51,10 @@ export function Calculator() {
         <div className={styles.subContainer}>
           <Form onSubmit={handleSubmit} method="post">
             <Row className="mb-3">
-              <Col md="7">
+              <Col md="7" sm="12">
                 <Form.Label>Weight (in kilograms) :</Form.Label>
               </Col>
-              <Col md="5">
+              <Col md="5" sm="12">
                 <Form.Control
                   type="number"
                   name="weight"
@@ -65,10 +65,10 @@ export function Calculator() {
               </Col>
             </Row>
             <Row className="mb-3">
-              <Col md="7">
+              <Col md="7" sm="12">
                 <Form.Label>Height (in centimeters) :</Form.Label>
               </Col>
-              <Col md="5">
+              <Col md="5" sm="12">
                 <Form.Control
                   type="number"
                   name="height"
@@ -112,6 +112,7 @@ export function Calculator() {
                 display: "flex",
                 justifyContent: "center",
                 marginTop: "30px",
+                marginBottom: "25px",
               }}
             >
               <span style={{ fontSize: "25px", fontWeight: "bold" }}>

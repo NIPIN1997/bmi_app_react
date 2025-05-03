@@ -8,13 +8,18 @@ export function Home() {
       <div className={styles.container}>
         <h1 className={styles.heading}>BMI APP</h1>
         <div className={styles.subContainer}>
-          <div>
+          <div className={styles.content}>
             <Calculator />
           </div>
           <div
-            style={{ borderLeft: "5px solid #c5c9c6", height: "400px" }}
+            style={{ borderLeft: "5px solid #c5c9c6", minHeight: "400px" }}
+            className={styles.borderVertical}
           ></div>
-          <div>
+          <div
+            style={{ borderBottom: "5px solid #c5c9c6" }}
+            className={styles.borderHorizontal}
+          ></div>
+          <div className={styles.content}>
             <Chart />
           </div>
         </div>

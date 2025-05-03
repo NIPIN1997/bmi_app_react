@@ -1,6 +1,6 @@
 .container {
-  width: 500px;
-  height: 400px;
+  max-width: 500px;
+  max-height: 400px;
   margin-top: 25px;
 }
 .subContainer {
@@ -21,4 +21,22 @@
   text-align: center;
   padding: 10px;
   color: white;
+}
+@media screen and (min-width: 450px) and (max-width: 650px) {
+  .subContainer {
+    width: 300px;
+    font-size: 15px;
+  }
+  .smallContainer {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .subContainer {
+    width: 250px;
+    font-size: 15px;
+  }
+  .smallContainer {
+    width: 125px;
+  }
 }
