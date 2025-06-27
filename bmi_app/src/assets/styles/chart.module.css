@@ -1,6 +1,6 @@
 .container {
   max-width: 500px;
-  max-height: 400px;
+  min-height: 400px;
   margin-top: 25px;
 }
 .subContainer {

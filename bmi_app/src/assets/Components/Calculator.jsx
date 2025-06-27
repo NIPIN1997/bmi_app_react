@@ -11,8 +11,10 @@ export function Calculator() {
   const [bmi, setBmi] = useState(0);
   const [category, setCategory] = useState("");
   const [color, setColor] = useState("");
+  const [shouldDisplay, setShouldDisplay] = useState(false);
   const onChange = (event) => {
     setData({ ...data, [event.target.name]: event.target.value });
+    setShouldDisplay(false);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -33,6 +35,7 @@ export function Calculator() {
       setCategory("Obese");
       setColor("#f20c0c");
     }
+    setShouldDisplay(true);
   };
 
   return (
@@ -59,6 +62,7 @@ export function Calculator() {
                   type="number"
                   name="weight"
                   step={0.001}
+                  min={0}
                   placeholder="Enter weight"
                   onChange={() => onChange(event)}
                 ></Form.Control>
@@ -73,6 +77,7 @@ export function Calculator() {
                   type="number"
                   name="height"
                   step={1}
+                  min={0}
                   placeholder="Enter height"
                   onChange={() => onChange(event)}
                 ></Form.Control>
@@ -94,7 +99,7 @@ export function Calculator() {
             </div>
           </Form>
         </div>
-        {bmi != 0 ? (
+        {bmi != 0 && !isNaN(bmi) && shouldDisplay ? (
           <>
             <div
               style={{
